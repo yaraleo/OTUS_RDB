@@ -42,6 +42,205 @@
 и прописать комментарии на каждое поле с пояснением почему выбран данный тип поля и на сколько он удовлетворяет поставленной задаче*
 
 ### Решение
+<html><head>
+<title>Data dictionary: C:\Users\Levanenko Yaroslav\Desktop\OTUS_Report\report</title>
+<style>
+    td,th {
+      text-align:center;
+      vertical-align:middle;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    caption, th, td {
+      padding: .2em .8em;
+      border: 1px solid #fff;
+    }
+    caption {
+      background: #dbb768;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    th {
+      font-weight: bold;
+      background: #f3ce7d;
+    }
+    td {
+      background: #ffea97;
+    }
+    </style>
+    </head>
+    <body>
+<img src='C:\Users\Levanenko Yaroslav\Desktop\OTUS_Report\report.png'>
+<table><caption>Table: vendor - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_vendor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>vend_name</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>vend_address</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_vendor`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: categories - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_categ</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор категории товара, первичный ключ. Тип INT самый подходящий.</td></tr><tr><td>name_categ</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Имя категории. Взят универсальный формат для текста. Длина произвольная.</td></tr><tr><td>perent_id_categ</td><td>INT</td><td>No</td><td>No</td><td>Yes</td><td></td><td>Внешний ключ ссылается на какое-либо занчение из этой же таблицы, которое является родительским в иерархии категорий.</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_categ`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: parent_id_categ_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>parent_id_categ_idx</td><td>['`id_categ`', '`perent_id_categ`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: dealer - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_dealer</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>dealer_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>dealer_adress</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_dealer`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: product - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_product</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>id_categ</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>prdct_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>prdct_producer_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_model</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_product`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: dealership - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_dealership</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>id_dealer</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_model</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_dealership`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: model - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>model_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_vendor</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_model`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: shipments - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_shipment</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>date</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_dealership</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>qty</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_shipment`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: items - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_items</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>id_shipment</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_model</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>item_serial_num</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>item_cost</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>item_sold_reserved_instock</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>item_price</td><td>DECIMAL</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>item_price_discount</td><td>DECIMAL</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_items`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: description_set - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_description_set</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>description_set_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_model</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_description_set`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: item_descriptions - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_item_descriptions</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>item_descriptions_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>item_descriptions_vol</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_description_set</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_item_descriptions`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br>
+</body></html>
 
 
 
