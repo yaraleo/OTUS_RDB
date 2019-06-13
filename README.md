@@ -43,7 +43,7 @@
 
 ### Решение
 
-<table><caption>Table: vendor</caption><tr><td colspan="7">Attributes</td></tr>
+<table><caption>Table: vendors - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -52,7 +52,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_vendor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>vend_name</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>vend_address</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_vendor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентафикатор вендора (производителя)</td></tr><tr><td>vend_name</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Название вендора</td></tr><tr><td>vend_address</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Адрес вендора</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -82,7 +82,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>parent_id_categ_idx</td><td>['`id_categ`', '`perent_id_categ`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: dealer - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>parent_id_categ_idx</td><td>['`id_categ`', '`perent_id_categ`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: dealers - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -91,14 +91,14 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_dealer</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>dealer_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>dealer_adress</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_dealer</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор дилера</td></tr><tr><td>dealer_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Имя дилера</td></tr><tr><td>dealer_adress</td><td>VARCHAR(255)</td><td>No</td><td>No</td><td>No</td><td></td><td>Адрес дилера</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_dealer`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: product</caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_dealer`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: product - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -114,7 +114,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_product`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: dealership</caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_product`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: dealers2vendors - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -123,7 +123,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_dealership</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>id_dealer</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_model</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_dealership</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор связи Дилера - Производителя</td></tr><tr><td>id_dealer</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор дилера</td></tr><tr><td>id_vendor</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор производителя</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -139,14 +139,14 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>model_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_vendor</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор модели в таблице</td></tr><tr><td>model_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Название модели</td></tr><tr><td>id_vendor</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор производителя</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_model`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: shipments</caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_model`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: shipments - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -162,7 +162,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_shipment`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: items</caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_shipment`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: items - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -178,7 +178,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_items`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: description_set - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_items`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: descriptions - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -187,14 +187,14 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_description_set</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>description_set_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_model</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_descriptions</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор таблицы Описания</td></tr><tr><td>description_set_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Название набора описания</td></tr><tr><td>id_model</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор модели</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_description_set`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: item_descriptions - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_descriptions`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: characteristics - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -203,14 +203,15 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_item_descriptions</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>item_descriptions_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>item_descriptions_vol</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_description_set</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_characteristics</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор таблицы характеристик</td></tr><tr><td>characteristics_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Имя характеристики</td></tr><tr><td>item_descriptions_vol</td><td>VARCHAR(255)</td><td>No</td><td>No</td><td>No</td><td></td><td>Значение или описание характеристики</td></tr><tr><td>id_description_set</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор названия набора характеристик</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_item_descriptions`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br>
+                <tr><td>PRIMARY</td><td>['`id_characteristics`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br>
+
 
 
 
