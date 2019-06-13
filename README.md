@@ -42,36 +42,7 @@
 и прописать комментарии на каждое поле с пояснением почему выбран данный тип поля и на сколько он удовлетворяет поставленной задаче*
 
 ### Решение
-<html><head>
-<title>Data dictionary: C:\Users\Levanenko Yaroslav\Desktop\OTUS_Report\report</title>
-<style>
-    td,th {
-      text-align:center;
-      vertical-align:middle;
-    }
-    table {
-      border-collapse: collapse;
-    }
-    caption, th, td {
-      padding: .2em .8em;
-      border: 1px solid #fff;
-    }
-    caption {
-      background: #dbb768;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    th {
-      font-weight: bold;
-      background: #f3ce7d;
-    }
-    td {
-      background: #ffea97;
-    }
-    </style>
-    </head>
-    <body>
-<img src='C:\Users\Levanenko Yaroslav\Desktop\OTUS_Report\report.png'>
+
 <table><caption>Table: vendor - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
@@ -240,7 +211,7 @@
                 <th>Description</th>
                 </tr>
                 <tr><td>PRIMARY</td><td>['`id_item_descriptions`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br>
-</body></html>
+
 
 
 
