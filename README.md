@@ -43,7 +43,7 @@
 
 ### Решение
 
-<table><caption>Table: vendor - </caption><tr><td colspan="7">Attributes</td></tr>
+<table><caption>Table: vendor</caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -98,7 +98,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_dealer`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: product - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_dealer`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: product</caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -114,7 +114,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_product`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: dealership - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_product`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: dealership</caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -146,7 +146,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_model`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: shipments - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_model`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: shipments</caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -162,7 +162,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_shipment`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: items - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_shipment`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: items</caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
