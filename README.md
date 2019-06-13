@@ -203,15 +203,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_characteristics</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор таблицы характеристик</td></tr><tr><td>characteristics_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Имя характеристики</td></tr><tr><td>item_descriptions_vol</td><td>VARCHAR(255)</td><td>No</td><td>No</td><td>No</td><td></td><td>Значение или описание характеристики</td></tr><tr><td>id_description_set</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор названия набора характеристик</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
-                <tr>
-                <th>Name</th>
-                <th>Columns</th>
-                <th>Type</th>
-                <th>Description</th>
-                </tr>
-                <tr><td>PRIMARY</td><td>['`id_characteristics`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br>
-</body></html>
+        </tr><tr><td>id_characteristics</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор таблицы характеристик</td></tr><tr><td>characteristics_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Имя характеристики</td></tr><tr><td>item_descriptions_vol</td><td>VARCHAR(255)</td><td>No</td><td>No</td><td>No</td><td></td><td>Значение или описание характеристики</td></tr><tr><td>id_description_set</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор названия набора характеристик</td></tr></table></br>
 
 
 ##  Домашняя работа 3
