@@ -306,7 +306,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_type</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>name</td><td>VARCHAR(25)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_type</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор названия статуса партнерства</td></tr><tr><td>name</td><td>VARCHAR(25)</td><td>No</td><td>No</td><td>No</td><td></td><td>Название статуса партнерства</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -322,7 +322,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_stock_status</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>stock_status_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_stock_status</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор статуса товара на складе</td></tr><tr><td>stock_status_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Название статуса товара на складе</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -330,8 +330,8 @@
                 <th>Description</th>
                 </tr>
                 <tr><td>PRIMARY</td><td>['`id_stock_status`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br>
-
-
+                
+                
 ##  Домашняя работа 3
 
 *Описываем логику транзакций для своей модели данных
