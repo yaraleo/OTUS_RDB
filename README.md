@@ -130,7 +130,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_dealer2vendor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор связи Дилер - Производитель</td></tr><tr><td>id_dealer</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор дилера</td></tr><tr><td>id_vendor</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор производителя</td></tr><tr><td>id_type</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_dealer2vendor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор связи Дилер - Производитель</td></tr><tr><td>id_dealer</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор дилера</td></tr><tr><td>id_vendor</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор производителя</td></tr><tr><td>id_type</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор типа дилерства</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -162,7 +162,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_shipment</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>date</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_dealership</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>qty</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_shipment</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор записи о поставке</td></tr><tr><td>date</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td></td><td>Дата поставки</td></tr><tr><td>id_dealership</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентификатор поставщика производителя - внешний ключ</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -178,7 +178,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_items</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr><tr><td>id_shipment</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_model</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>item_serial_num</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>item_cost</td><td>DECIMAL(10,4)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr><tr><td>id_stock_status</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Статус единицы товара на складе</td></tr><tr><td>id_categ</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентфикатор категории - Внешний ключ</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_items</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор записи в таблице</td></tr><tr><td>id_shipment</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Внешний ключ поставки</td></tr><tr><td>id_model</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Внешний ключ модель</td></tr><tr><td>item_serial_num</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Сериальный уникальный номер производителя единцы товара</td></tr><tr><td>item_cost</td><td>DECIMAL(10,4)</td><td>No</td><td>No</td><td>No</td><td></td><td>Закупочная цена поставщика</td></tr><tr><td>id_stock_status</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Статус единицы товара на складе</td></tr><tr><td>id_categ</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td>Идентфикатор категории - Внешний ключ</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -330,7 +330,6 @@
                 <th>Description</th>
                 </tr>
                 <tr><td>PRIMARY</td><td>['`id_stock_status`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br>
-                
                 
 ##  Домашняя работа 3
 
