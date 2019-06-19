@@ -408,14 +408,7 @@ COMMIT;
 
 Бизнес-задача 7. Завершение выпуска какой-либо модели. 
 
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
-- [x] list syntax required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
 
-
-![GitHub Logo](./logo.png)
-Format: ![Alt Text](url)
 
 
 ## Домашнее задание 4
