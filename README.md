@@ -414,6 +414,10 @@ COMMIT;
 - [ ] this is an incomplete item
 
 
+![GitHub Logo](./logo.png)
+Format: ![Alt Text](url)
+
+
 ## Домашнее задание 4
 
 *Добавляем в модель данных дополнительные индексы и ограничения*
