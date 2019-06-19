@@ -391,6 +391,11 @@
 
 Бизнес-задача 1. Проверка пользователя при регистрации; 
 
+START TRANSACTION;
+UPDATE user_account SET allsum=allsum + 1000 WHERE id='1';
+UPDATE user_account SET allsum=allsum - 1000 WHERE id='2';
+COMMIT;
+
 Бизнес-задача 2. Авторизация на сайте электронного магазина; 
 
 Бизнес-задача 3. Проверка статуса наличия товара на складе при заказе товара. 
