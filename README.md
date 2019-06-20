@@ -21,7 +21,7 @@
 
 ![Image of Yaktocat](https://github.com/yaraleo/OTUS_RDB/blob/master/schema_v3.png)
 
-Выбранные таблицы отношений:
+Таблицы отношений:
 
 | Таблица       | Назначение         |
 | ------------- |------------------|
@@ -400,23 +400,25 @@
 
 Бизнес-задача 1. Перемещение товара в корзину электронного магазина.  
 
-Помещаем выбранный товар в корзину, и одновременно резервируем единицу товара на складе. 
+Помещаем выбранный товар в корзину, и одновременно резервируем единицу товара на складе, если товара не хватает, то откатываем. 
 
 ```
 START TRANSACTION;
-UPDATE user_account SET allsum=allsum + 1000 WHERE id='1';
-UPDATE user_account SET allsum=allsum - 1000 WHERE id='2';
+INSERT INTO orders (order_number, date, id_user) VALUES();
+INSERT INTO order2product (id_order, id_product, qty) VALUES();
+UPDATE stock SET reserve_sold="1" WHERE id_item=id_model;
 COMMIT;
 ```
 
 Бизнес-задача 2. Оплата товара. 
 
-Платим за товар и одновременно ожидаем подтверждения об оплате от платежной системы. 
+Платим за товар и одновременно ожидаем подтверждения об оплате от платежной системы, ждем подтверждения определенное время. 
+Если приходит положительный ответ, то все нормально, если отрицательный или превышен тайм-аут, то откатываем. 
 
 ```
 START TRANSACTION;
-UPDATE user_account SET allsum=allsum + 1000 WHERE id='1';
-UPDATE user_account SET allsum=allsum - 1000 WHERE id='2';
+INSERT INTO payments (datime, id_order, sum, currency) VALUES();
+--Если приходит положительный ответ, то все нормально, если отрицательный или превышен тайм-аут, то откатываем. 
 COMMIT;
 ```
 
@@ -426,19 +428,21 @@ COMMIT;
 
 ```
 START TRANSACTION;
-UPDATE user_account SET allsum=allsum + 1000 WHERE id='1';
-UPDATE user_account SET allsum=allsum - 1000 WHERE id='2';
+--Получаем товар на склад по закупочной цене N и одноверменно проверяем по какой цене мы продаем товар, чтобы не поставить цену себе убыток. 
 COMMIT;
 ```
 
 Бизнес-задача 4. Массовая процедура вставки в таблицу товары (stocks). 
 
-Последовательно делаем вставки новых товаров в таблицу stock. Мы хотим чтобы эта операция выполнилась одним действием без доступа к этим данным со стороны таблицы.  
+Последовательно делаем вставки новых товаров в таблицу stock. Мы хотим чтобы эта операция выполнилась одним действием.  
 
 ```
 START TRANSACTION;
-UPDATE user_account SET allsum=allsum + 1000 WHERE id='1';
-UPDATE user_account SET allsum=allsum - 1000 WHERE id='2';
+INSERT INTO stock (id_dealer2vendor, id_date, id_model, item_serial_num, item_cost) VALUES();
+INSERT INTO stock (id_dealer2vendor, id_date, id_model, item_serial_num, item_cost) VALUES();
+INSERT INTO stock (id_dealer2vendor, id_date, id_model, item_serial_num, item_cost) VALUES();
+INSERT INTO stock (id_dealer2vendor, id_date, id_model, item_serial_num, item_cost) VALUES();
+...
 COMMIT;
 ```
 
