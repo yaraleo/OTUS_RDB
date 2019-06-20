@@ -64,14 +64,14 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_vendor`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: id_vendor_UNIQUE</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_vendor`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_vendor_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_vendor_UNIQUE</td><td>['`id_vendor`']</td><td>UNIQUE</td><td></td></tr></table></br></table></br><table><caption>Table: categories - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_vendor_idx</td><td>['`id_vendor`']</td><td>UNIQUE</td><td></td></tr></table></br></table></br><table><caption>Table: categories - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -87,14 +87,14 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_categ`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: parent_id_categ_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_categ`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: parent_id_categ_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>parent_id_categ_idx</td><td>['`id_categ`', '`perent_id_categ`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: dealers - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>parent_id_categ_idx</td><td>['`id_categ`', '`perent_id_categ`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: dealers - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -110,7 +110,14 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_dealer`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: product - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_dealer`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_dealer_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>id_dealer_idx</td><td>['`id_dealer`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: product - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -126,21 +133,21 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_product`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_product`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_model_idx</td><td>['`id_model`']</td><td>INDEX</td><td></td></tr></table></br><table><caption>Index: id_categ_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>id_model_idx</td><td>['`id_model`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: id_categ_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_categ_idx</td><td>['`id_categ`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: dealers2vendors - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_categ_idx</td><td>['`id_categ`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: dealers2vendors - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -156,21 +163,21 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_dealer2vendor`']</td><td>PRIMARY</td><td>Индекс на ключевое поле.</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_dealer2vendor`']</td><td>PRIMARY</td><td>Индекс на ключевое поле.</td></tr></table></br><table><caption>Index: id_dealer_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_dealer`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>id_dealer_idx</td><td>['`id_dealer`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: id_vendor_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_vendor`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: model - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_vendor_idx</td><td>['`id_vendor`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: model - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -186,14 +193,14 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_model`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: id_vendor_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_model`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_vendor_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_vendor_idx</td><td>['`id_vendor`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: stock - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_vendor_idx</td><td>['`id_vendor`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: stock - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -209,28 +216,28 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_items`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: id_dealer2vendor_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_items`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_dealer2vendor_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_dealer2vendor_idx</td><td>['`id_dealer2vendor`']</td><td>INDEX</td><td></td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>id_dealer2vendor_idx</td><td>['`id_dealer2vendor`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_model_idx</td><td>['`id_model`']</td><td>INDEX</td><td></td></tr></table></br><table><caption>Index: id_categ_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>id_model_idx</td><td>['`id_model`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: id_categ_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_categ_idx</td><td>['`id_categ`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: model2description - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_categ_idx</td><td>['`id_categ`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: model2description - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -246,21 +253,21 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_model2description`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_model2description`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_model_idx</td><td>['`id_model`']</td><td>INDEX</td><td></td></tr></table></br><table><caption>Index: id_description_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>id_model_idx</td><td>['`id_model`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: id_description_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_description_idx</td><td>['`id_description`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: description - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_description_idx</td><td>['`id_description`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: description - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -276,14 +283,14 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_description`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: id_description</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_description`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_description_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_description</td><td>['`id_description`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: users - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_description_idx</td><td>['`id_description`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: users - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -322,7 +329,7 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>order_user_idx</td><td>['`id_user`']</td><td>INDEX</td><td>Индекс по ключевому полю</td></tr></table></br></table></br><table><caption>Table: order2product - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>order_user_idx</td><td>['`id_user`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: order2product - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -338,21 +345,21 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_order2product`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: id_product_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_order2product`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_product_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_product_idx</td><td>['`id_product`']</td><td>INDEX</td><td></td></tr></table></br><table><caption>Index: id_order_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>id_product_idx</td><td>['`id_product`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: id_order_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_order_idx</td><td>['`id_order`']</td><td>INDEX</td><td></td></tr></table></br></table></br><table><caption>Table: payments - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_order_idx</td><td>['`id_order`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: payments - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -368,14 +375,14 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_payments`']</td><td>PRIMARY</td><td></td></tr></table></br><table><caption>Index: id_order_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_payments`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_order_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_order_idx</td><td>['`id_order`']</td><td>INDEX</td><td></td></tr></table></br></table></br>
+                <tr><td>id_order_idx</td><td>['`id_order`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br>
                 
 ##  Домашнее задание 3
 
