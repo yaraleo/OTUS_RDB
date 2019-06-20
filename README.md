@@ -19,7 +19,7 @@
 
 В качестве модели была принята поставка единичного оборудования (например бытовой техники, запчастей, единиц оружия). Производство продукции не привязано к производителю, но каждый единичный товар имеет сериальный номер. 
 
-![Image of Yaktocat](https://github.com/yaraleo/OTUS_RDB/blob/master/schema_v2.png)
+![Image of Yaktocat](https://github.com/yaraleo/OTUS_RDB/blob/master/schema_v3.png)
 
 Выбранные таблицы отношений:
 
