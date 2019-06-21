@@ -57,7 +57,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_vendor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор вендора (производителя)</td></tr><tr><td>vend_name</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Название вендора</td></tr><tr><td>vend_address</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Адрес вендора</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_vendor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор вендора (производителя)</td></tr><tr><td>vend_name</td><td>VARCHAR(125)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Название вендора</td></tr><tr><td>vend_address</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Адрес вендора</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -126,7 +126,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_product</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор таблицы продукт</td></tr><tr><td>id_categ</td><td>INT</td><td>No</td><td>No</td><td>Yes</td><td></td><td>Идентификатор категории</td></tr><tr><td>product_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Имя продукта</td></tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор модели внешний ключ</td></tr><tr><td>price</td><td>DECIMAL(10,4)</td><td>No</td><td>No</td><td>No</td><td></td><td>Цена продажи</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_product</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор таблицы продукт</td></tr><tr><td>id_categ</td><td>INT</td><td>No</td><td>No</td><td>Yes</td><td></td><td>Идентификатор категории</td></tr><tr><td>product_name</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Имя продукта</td></tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор модели внешний ключ</td></tr><tr><td>price</td><td>DECIMAL(10,4)</td><td>No</td><td>No</td><td>No</td><td></td><td>Цена продажи</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -156,14 +156,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_dealer2vendor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор связи Дилер - Производитель</td></tr><tr><td>id_dealer</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор дилера</td></tr><tr><td>id_vendor</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор производителя</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
-                <tr>
-                <th>Name</th>
-                <th>Columns</th>
-                <th>Type</th>
-                <th>Description</th>
-                </tr>
-                <tr><td>PRIMARY</td><td>['`id_dealer2vendor`']</td><td>PRIMARY</td><td>Индекс на ключевое поле.</td></tr></table></br><table><caption>Index: id_dealer_idx</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_dealer</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор дилера</td></tr><tr><td>id_vendor</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор производителя</td></tr><tr><td>data_start</td><td>DATETIME</td><td>No</td><td>No</td><td>No</td><td></td><td>Дата начала отношений Дилер-Вендор</td></tr><tr><td>data_end</td><td>DATETIME</td><td>No</td><td>No</td><td>No</td><td></td><td>Дата завершения отношений Дилер-Вендор</td></tr></table></br><table><caption>Index: id_dealer_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -177,7 +170,14 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_vendor_idx</td><td>['`id_vendor`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: model - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_vendor_idx</td><td>['`id_vendor`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_vendor`', '`id_dealer`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: model - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -186,7 +186,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор модели в таблице</td></tr><tr><td>model_name</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Название модели</td></tr><tr><td>id_vendor</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор производителя</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор модели в таблице</td></tr><tr><td>model_name</td><td>VARCHAR(125)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Название модели</td></tr><tr><td>id_vendor</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор производителя</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -209,21 +209,14 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_items</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор записи в таблице</td></tr><tr><td>id_dealer2vendor</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Внешний ключ поставки</td></tr><tr><td>id_date</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Статус единицы товара на складе</td></tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Внешний ключ модель</td></tr><tr><td>item_serial_num</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Сериальный уникальный номер  единцы товара</td></tr><tr><td>item_cost</td><td>DECIMAL(10,4)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Закупочная цена поставщика</td></tr><tr><td>id_categ</td><td>INT</td><td>No</td><td>No</td><td>Yes</td><td></td><td>Идентфикатор категории - Внешний ключ</td></tr><tr><td>reserve_sold</td><td>ENUM("1", "2", "3")</td><td>No</td><td>No</td><td>No</td><td></td><td>Статус 1-резерв, 2- продано, 3 - неисправно</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_items</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор записи в таблице</td></tr><tr><td>id_dealer2vendor</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Внешний ключ поставки</td></tr><tr><td>id_date</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Статус единицы товара на складе</td></tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Внешний ключ модель</td></tr><tr><td>item_serial_num</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td>Сериальный уникальный номер  единцы товара</td></tr><tr><td>item_cost</td><td>DECIMAL(10,4)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Закупочная цена поставщика</td></tr><tr><td>id_categ</td><td>INT</td><td>No</td><td>No</td><td>Yes</td><td></td><td>Идентфикатор категории - Внешний ключ</td></tr><tr><td>reserve_sold</td><td>ENUM("1", "2", "3")</td><td>No</td><td>No</td><td>No</td><td></td><td>Статус 1-резерв, 2- продано, 3 - неисправно</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>PRIMARY</td><td>['`id_items`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_dealer2vendor_idx</caption><tr><td colspan="4">Attributes</td></tr>
-                <tr>
-                <th>Name</th>
-                <th>Columns</th>
-                <th>Type</th>
-                <th>Description</th>
-                </tr>
-                <tr><td>id_dealer2vendor_idx</td><td>['`id_dealer2vendor`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr><td>PRIMARY</td><td>['`id_items`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -246,14 +239,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_model2description</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор таблицы Описания</td></tr><tr><td>id_description</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Название набора описания</td></tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор модели</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
-                <tr>
-                <th>Name</th>
-                <th>Columns</th>
-                <th>Type</th>
-                <th>Description</th>
-                </tr>
-                <tr><td>PRIMARY</td><td>['`id_model2description`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_description</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Название набора описания</td></tr><tr><td>id_model</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор модели</td></tr></table></br><table><caption>Index: id_model_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -267,7 +253,14 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_description_idx</td><td>['`id_description`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: description - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_description_idx</td><td>['`id_description`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_description`', '`id_model`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: description - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -338,14 +331,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_order2product</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор пункта заказа</td></tr><tr><td>id_order</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Внешний ключ - Идентификатор заказа</td></tr><tr><td>id_product</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор продукта</td></tr><tr><td>qty</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Количество единиц продукта</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
-                <tr>
-                <th>Name</th>
-                <th>Columns</th>
-                <th>Type</th>
-                <th>Description</th>
-                </tr>
-                <tr><td>PRIMARY</td><td>['`id_order2product`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_product_idx</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_order</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Внешний ключ - Идентификатор заказа</td></tr><tr><td>id_product</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор продукта</td></tr><tr><td>qty</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Количество единиц продукта</td></tr></table></br><table><caption>Index: id_product_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -359,7 +345,14 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
-                <tr><td>id_order_idx</td><td>['`id_order`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: payments - </caption><tr><td colspan="7">Attributes</td></tr>
+                <tr><td>id_order_idx</td><td>['`id_order`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_order`', '`id_product`']</td><td>PRIMARY</td><td></td></tr></table></br></table></br><table><caption>Table: payments - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
         <th>Type</th>
@@ -368,7 +361,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_payments</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор строки платежа</td></tr><tr><td>transaction_id</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Идентификатор транзакции в платежной системе</td></tr><tr><td>datetime</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Дата время транзакции</td></tr><tr><td>id_order</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор заказа</td></tr><tr><td>sum</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Сумма платежа</td></tr><tr><td>currency</td><td>VARCHAR(5)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Валюта платежа</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_payments</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор строки платежа</td></tr><tr><td>transaction_id</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Идентификатор транзакции в платежной системе</td></tr><tr><td>datetime</td><td>DATETIME</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Дата время транзакции</td></tr><tr><td>id_order</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Идентификатор заказа</td></tr><tr><td>sum</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Сумма платежа</td></tr><tr><td>currency</td><td>VARCHAR(25)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Валюта платежа</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
