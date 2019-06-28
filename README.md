@@ -56,7 +56,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_vendor</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор вендора в таблице</td></tr><tr><td>vend_name</td><td>VARCHAR(125)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Название вендора</td></tr><tr><td>vend_address</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Адрес вендора</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_vendor</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор производителя в таблице</td></tr><tr><td>vend_name</td><td>VARCHAR(125)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Название производителя</td></tr><tr><td>vend_address</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Адрес производителя</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
@@ -148,7 +148,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_dealer</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор дилера</td></tr><tr><td>id_vendor</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор производителя</td></tr><tr><td>data_start</td><td>DATETIME</td><td>No</td><td>No</td><td>No</td><td></td><td>Дата начала отношений Дилер-Вендор</td></tr><tr><td>data_end</td><td>DATETIME</td><td>No</td><td>No</td><td>No</td><td></td><td>Дата завершения отношений Дилер-Вендор</td></tr></table></br><table><caption>Index: id_dealer_idx</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_dealer</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор поставщика</td></tr><tr><td>id_vendor</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор производителя</td></tr><tr><td>data_start</td><td>DATETIME</td><td>No</td><td>No</td><td>No</td><td></td><td>Дата начала отношений Дилер-Вендор</td></tr><tr><td>data_end</td><td>DATETIME</td><td>No</td><td>No</td><td>No</td><td></td><td>Дата завершения отношений Дилер-Вендор</td></tr></table></br><table><caption>Index: id_dealer_idx</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
