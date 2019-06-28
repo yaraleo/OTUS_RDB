@@ -116,6 +116,75 @@
                 <th>Type</th>
                 <th>Description</th>
                 </tr>
+                <tr><td>id_dealer_idx</td><td>['`id_dealer`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br><table><caption>Table: VENDORS - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_vendor</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор вендора в таблице</td></tr><tr><td>vend_name</td><td>VARCHAR(125)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Название вендора</td></tr><tr><td>vend_address</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Адрес вендора</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_vendor`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_vendor_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>id_vendor_idx</td><td>['`id_vendor`']</td><td>UNIQUE</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: categories - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_categ</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td>Идентификатор категории товара, первичный ключ. Тип INT самый подходящий.</td></tr><tr><td>name_categ</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Имя категории. Взят универсальный формат для текста. Длина произвольная.</td></tr><tr><td>perent_id_categ</td><td>INT(11)</td><td>No</td><td>No</td><td>Yes</td><td></td><td>Внешний ключ ссылается на какое-либо занчение из этой же таблицы, которое является родительским в иерархии категорий.</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_categ`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: parent_id_categ_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>parent_id_categ_idx</td><td>['`id_categ`', '`perent_id_categ`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: dealers - </caption><tr><td colspan="7">Attributes</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Not Null</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr><tr><td>id_dealer</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор поставщика в таблице</td></tr><tr><td>dealer_name</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Имя поставщика</td></tr><tr><td>dealer_adress</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Адрес поставщика</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+                <tr><td>PRIMARY</td><td>['`id_dealer`']</td><td>PRIMARY</td><td>Индекс на ключевое поле</td></tr></table></br><table><caption>Index: id_dealer_idx</caption><tr><td colspan="4">Attributes</td></tr>
+                <tr>
+                <th>Name</th>
+                <th>Columns</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
                 <tr><td>id_dealer_idx</td><td>['`id_dealer`']</td><td>INDEX</td><td>Индекс на внешний ключ</td></tr></table></br></table></br><table><caption>Table: product - </caption><tr><td colspan="7">Attributes</td></tr>
         <tr>
         <th>Name</th>
