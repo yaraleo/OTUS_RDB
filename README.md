@@ -102,7 +102,7 @@
         <th>FK</th>
         <th>Default</th>
         <th>Comment</th>
-        </tr><tr><td>id_dealer</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор поставщика в таблице</td></tr><tr><td>dealer_name</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Имя дилера</td></tr><tr><td>dealer_adress</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Адрес дилера</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
+        </tr><tr><td>id_dealer</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Идентификатор поставщика в таблице</td></tr><tr><td>dealer_name</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Имя поставщика</td></tr><tr><td>dealer_adress</td><td>VARCHAR(255)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Адрес поставщика</td></tr></table></br><table><caption>Index: PRIMARY</caption><tr><td colspan="4">Attributes</td></tr>
                 <tr>
                 <th>Name</th>
                 <th>Columns</th>
